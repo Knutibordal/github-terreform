@@ -6,7 +6,7 @@ resource "random_string" "random_string" {
 
 # Create Resource Group
 resource "azurerm_resource_group" "rg_web" {
-  name     = "var.rg_name_${terraform.workspace}"
+  name     = "${var.rg_name}_${terraform.workspace}"
   location = var.location
 }
 
@@ -30,7 +30,7 @@ resource "azurerm_storage_blob" "index_html" {
   storage_container_name = "$web"
   type                   = "Block"
   content_type           = "text/html"
-  source_content         = var.source_content
+  source_content         = "<h3>${var.source_content}${terraform.workspace}</h3>"
 }
 
 output "primary_web_endpoint" {
