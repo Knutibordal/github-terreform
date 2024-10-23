@@ -19,7 +19,8 @@ resource "azurerm_storage_account" "sa_web" {
   account_replication_type = "LRS"
 
   static_website {
-    index_document = var.index_document
+    index_document = var.index_document     
+    
   }
 }
 
