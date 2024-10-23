@@ -9,7 +9,7 @@ terraform {
     resource_group_name  = "rg-terraform-backend-tim"
     storage_account_name = "sabetfstimcfw8rawacd"
     container_name       = "tfstate"
-    key                  = "web.terraform.tfstate"
+    key                  = "web-kib.terraform.tfstate"
   }
 }
 
