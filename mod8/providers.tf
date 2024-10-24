@@ -6,10 +6,10 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "rg-terraform-backend-tim"
-    storage_account_name = "sabetfstimcfw8rawacd"
-    container_name       = "tfstate"
-    key                  = "web-kib.terraform.tfstate"
+    resource_group_name  = "rgbackendkib001"
+    storage_account_name = "sabackendtfskibn66lrtrn"
+    container_name       = "scbackendtfskib"
+    key                  = "web-mod8-kib.terraform.tfstate"
   }
 }
 
